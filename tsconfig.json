@@ -26,6 +26,7 @@
 
     "paths": {
       "@tiny-state-manager/store": ["./packages/store/index.ts"],
+      "@tiny-state-manager/x": ["./packages/store/src/x/index.ts"]
     }
   }
 }

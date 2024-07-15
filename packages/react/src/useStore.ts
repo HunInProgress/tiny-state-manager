@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { LazyStore, Reducers, StoreParams, StoreType, StoreWithReducer } from '@tiny-state-manager/store'
+import {
+  LazyStore,
+  Reducers,
+  StoreParams,
+  StoreType,
+  StoreWithReducer,
+} from "@tiny-state-manager/store";
 
 export function useStore<
   T,
@@ -54,3 +60,21 @@ export function useStore<
 
   return store;
 }
+
+// function useStore<T>(store: Store<T>, wait?: boolean) {
+//   const [state, setState] = useState<State>();
+//   const [_, setData] = useState<T>(store.data as T);
+//   const [s] = useState(() => {
+//     store.subscribe((data, state) => {
+//       setData(data);
+//       setState(state);
+//     });
+//     return store;
+//   });
+
+//   if (wait && state?.promise) {
+//     throw state.promise;
+//   }
+
+//   return s;
+// }

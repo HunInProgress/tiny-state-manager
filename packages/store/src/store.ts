@@ -318,3 +318,13 @@ const init = (): CreateLazyStore => {
 };
 
 export const createStore = init();
+
+const s = createStore({
+  defaultState: "",
+  id: "tet",
+}).load();
+
+s.update((async () => "hehe")());
+
+try {
+} catch (e) {}
